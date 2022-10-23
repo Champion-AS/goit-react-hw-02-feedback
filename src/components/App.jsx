@@ -11,6 +11,7 @@ export class App extends Component {
     neutral: PropTypes.number,
     bad: PropTypes.number,
   };
+  
 
   state = {
     good: 0,
