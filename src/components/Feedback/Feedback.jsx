@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './Feedback.module.css'
 
 const Feedback = ({ options, onLeaveFeedback }) => (
@@ -18,3 +19,10 @@ const Feedback = ({ options, onLeaveFeedback }) => (
 );
 
 export default Feedback;
+
+Feedback.PropsTypes = {
+  options: PropTypes.arrayOf(
+    PropTypes.string),
+  onLeaveFeedback: PropTypes.func,
+}
+

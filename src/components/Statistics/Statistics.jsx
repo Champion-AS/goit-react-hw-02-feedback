@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./Statistics.module.css"
+import PropTypes from 'prop-types';
 
 export default function Statistics({ message, good, bad, neutral, total, percentage }) {
     return total ? (<div className={s.statsThumb}>
@@ -19,4 +20,13 @@ export default function Statistics({ message, good, bad, neutral, total, percent
             Percentage: <span>{ percentage }%</span>    
         </span>
     </div>) : (<p>{ message }</p>)
+}
+
+Statistics.propTypes = {
+    total: PropTypes.func,
+    percentage: PropTypes.func,
+    message: PropTypes.string.isRequired,
+    good: PropTypes.string.isRequired,
+    bad: PropTypes.string.isRequired,
+    neutral: PropTypes.string.isRequired,
 }

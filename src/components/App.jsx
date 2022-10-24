@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React, { Component } from 'react';
 import Feedback from './Feedback/Feedback';
 import { Section } from './Section/Section';
@@ -6,13 +6,6 @@ import Statistics from './Statistics/Statistics';
 
 
 export class App extends Component {
-  static propTypes = {
-    good: PropTypes.number,
-    neutral: PropTypes.number,
-    bad: PropTypes.number,
-  };
-  
-
   state = {
     good: 0,
     neutral: 0,
@@ -62,4 +55,3 @@ export class App extends Component {
   }
 }
 
-export default App;
